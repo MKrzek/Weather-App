@@ -7,7 +7,7 @@ export default class FetchData extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            name:'',
+           name:this.props.name,
            temperature: null,
            description: null,
            weatherIcon:null,
@@ -44,8 +44,7 @@ export default class FetchData extends React.Component{
         
             return<div>
                  <DisplayWeather {...this.state}/>
-              
-                </div>
+                  </div>
         }  
         }
     

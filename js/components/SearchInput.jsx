@@ -1,24 +1,28 @@
 import React from 'react';
+import FetchData from './FetchData.jsx';
 
 export default class SearchInput extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            name:'',
+            cityName:'',
         }
     }
-    handleNameChange=()=>{
-        const name= event.target.value.replace(/\d/g,'');
+    handleCityNameChange=()=>{
+        const cityName= event.target.value.replace(/\d/g,'');
         this.setState({
-            name:name,
+            cityName:cityName,
         })
     }
 
     render(){
-        return <form>
+        return <div>
+                <form>
                   <label>
-                      <input type='text' value={this.state.name} onChange={this.handleNameChange}/>
+                      <input type='text' value={this.state.name} onChange={this.handleCityNameChange}/>
                   </label>
                </form>
+               <FetchData cityName={this.state.cityName}/>
+               </div>
     }
 }

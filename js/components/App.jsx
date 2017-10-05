@@ -8,8 +8,8 @@ class App extends React.Component{
         return <div>
                 <Title />
                 <SearchInput />
-                <FetchData />
-                <DisplayWeather />
+                
+                
                </div>
     }}
 
