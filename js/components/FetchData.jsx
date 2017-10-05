@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchInput from './SearchInput.jsx';
+import DisplayWeather from './DisplayWeather.jsx';
 const API_KEY='0d97dafb64ebaf36cf169cd4e5f02e5a';
 
 export default class FetchData extends React.Component{
@@ -42,10 +43,8 @@ export default class FetchData extends React.Component{
         const {descriptionMain, description, temperature, weatherIcon} = this.state;
         
             return<div>
-                {temperature}
-                {description}
-                <img src={'http://openweathermap.org/img/w/' + this.state.weatherIcon + '.png'}></img>
-                {descriptionMain}
+                 <DisplayWeather {...this.state}/>
+              
                 </div>
         }  
         }
