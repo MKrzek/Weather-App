@@ -11,6 +11,7 @@ export default class DisplayWeather extends React.Component{
                 <span>{description}</span>
                 <img src={'http://openweathermap.org/img/w/' + weatherIcon + '.png'}></img>
                 <span>{descriptionMain}</span>
+               
                </div>
     }
 }

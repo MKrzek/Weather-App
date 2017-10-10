@@ -2,7 +2,7 @@ import React from 'react';
 import SearchInput from './SearchInput.jsx';
 import DisplayWeather from './DisplayWeather.jsx';
 import DisplayAlert from './DisplayAlert.jsx';
-
+import MyLocations from './MyLocations.jsx';
 
 const API_KEY='0d97dafb64ebaf36cf169cd4e5f02e5a';
 
@@ -73,12 +73,16 @@ export default class FetchData extends React.Component{
     render(){
         const {descriptionMain, description, temperature, weatherIcon, name,render, alertDisplay} = this.state;
             return<div>
-                    <SearchInput cityName={this.state.cityName} 
-                    handleNameChange={this.handleNameChange} 
-                    handleSubmitButton={this.handleSubmitButton}/>
-                    {alertDisplay?(<DisplayAlert />): null}
-                    {render?(<DisplayWeather {...this.state}/>): null}
-                    
+                    <div>
+                       <SearchInput cityName={this.state.cityName} 
+                       handleNameChange={this.handleNameChange} 
+                       handleSubmitButton={this.handleSubmitButton}/>
+                       {alertDisplay?(<DisplayAlert />): null}
+                        {render?(<DisplayWeather {...this.state}/>): null}
+                    </div>
+                    <div>
+                        <MyLocations myNewLocation={this.state.cityName}/>
+                    </div>
                    </div>
         }  
 }
