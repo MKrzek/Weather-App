@@ -12,10 +12,11 @@ export default class FetchData extends React.Component{
            temperature: null,
            description: null,
            weatherIcon:null,
-           descriptionMain: null,        
+           descriptionMain: null,    
+           name: null,     
         }
     }
-    componentDidUpdate(){
+   componentWillReceiveProps(){
         this.showWeather()
     }
      
@@ -41,13 +42,14 @@ export default class FetchData extends React.Component{
                 temperature: data.main.temp,
                 description: data.weather[0].description,
                 weatherIcon:data.weather[0].icon,
-                descriptionMain:data.weather[0].main
+                descriptionMain:data.weather[0].main,
+                name: data.name,
               })      
             })     
     }}
 
     render(){
-        const {descriptionMain, description, temperature, weatherIcon} = this.state;
+        const {descriptionMain, description, temperature, weatherIcon, name} = this.state;
         
             return<div>
                  <DisplayWeather {...this.state}/>
