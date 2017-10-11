@@ -70,6 +70,8 @@ export default class FetchData extends React.Component{
          }
 }      
 )}
+
+
     render(){
         const {descriptionMain, description, temperature, weatherIcon, name,render, alertDisplay} = this.state;
             return<div>
@@ -79,6 +81,9 @@ export default class FetchData extends React.Component{
                        handleSubmitButton={this.handleSubmitButton}/>
                        {alertDisplay?(<DisplayAlert />): null}
                         {render?(<DisplayWeather {...this.state}/>): null}
+                    </div>
+                    <div>
+                    <button onClick={this.addToLocalStorage}>Add to my Locations</button>
                     </div>
                     <div>
                         <MyLocations myNewLocation={this.state.cityName}/>
