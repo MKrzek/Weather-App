@@ -20,8 +20,7 @@ export default class MyLocations extends React.Component{
     render(){
         return <div>
                 <button onClick={this.addToLocalStorage}>Add to my Locations</button>
-               <Link to ='/ShowLocation'>My Locations</Link>
-              
+               <Link to ="/ShowLocation">My Locations</Link> 
               </div>
     }
 }
