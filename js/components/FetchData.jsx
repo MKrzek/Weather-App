@@ -86,6 +86,7 @@ export default class FetchData extends React.Component{
                     <div>
                         <MyLocations myNewLocation={this.state.cityName}/>
                     </div>
+                    
                    </div>
         }  
 }
