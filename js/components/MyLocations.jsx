@@ -9,7 +9,7 @@ export default class MyLocations extends React.Component{
         const locations=JSON.parse(localStorage.getItem('myLocations'))||[];
         if (locations.indexOf(this.props.myNewLocation)==-1){
             const myLocations=[this.props.myNewLocation, ...locations];
-            console.log (myLocations);
+           
             localStorage.setItem('myLocations', JSON.stringify(myLocations));
         }
     }  
@@ -18,9 +18,11 @@ export default class MyLocations extends React.Component{
     
     
     render(){
+       
         return <div>
                 <button onClick={this.addToLocalStorage}>Add to my Locations</button>
                 <Link to ="/ShowLocations">My Locations</Link> 
+            
               </div>
     }
 }

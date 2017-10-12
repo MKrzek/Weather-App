@@ -88,7 +88,7 @@ export default class FetchData extends React.Component{
 
 
     render(){
-        const {descriptionMain, description, temperature, weatherIcon, name,render, alertDisplay} = this.state;
+        const {descriptionMain, description, temperature, weatherIcon, name,render, alertDisplay, cityName} = this.state;
             return<div>
                     <div>
                        <SearchInput cityName={this.state.cityName} 
@@ -99,7 +99,7 @@ export default class FetchData extends React.Component{
                     </div>
                     
                     <div>
-                        <MyLocations myNewLocation={this.state.cityName}/>
+                        <MyLocations myNewLocation={cityName}/>
                     </div>
                     
                    </div>
