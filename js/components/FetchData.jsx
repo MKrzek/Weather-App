@@ -35,8 +35,22 @@ export default class FetchData extends React.Component{
             render:false,
             alertDisplay: false,
          })
-         this.showWeather()     
+         this.showWeather()   
+         const tempLocalStorage= JSON.parse(localStorage.getItem('tempLocalStorage'))||[];
+         const locations=JSON.parse(localStorage.getItem('myLocations'))||[];
+         if (tempLocalStorage.includes(this.state.cityName)){
+            const myLocations=[this.state.cityName, ...locations];
+            console.log (myLocations);
+            localStorage.setItem('myLocations', JSON.stringify(myLocations))};
+        if (!tempLocalStorage.includes(this.state.cityName)){
+            const myTempLocations=[this.state.cityName,...tempLocalStorage];
+            console.log (myTempLocations)
+            localStorage.setItem('tempLocalStorage', JSON.stringify(myTempLocations));
+        }
+         
+         
      }
+     
      
     
     showWeather = () => {
@@ -65,7 +79,8 @@ export default class FetchData extends React.Component{
                     name: data.name,
                     render: true,
                    
-              })      
+              })  
+              
             })    
          }
 }      
