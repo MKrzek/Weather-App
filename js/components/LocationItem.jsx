@@ -4,10 +4,10 @@ import React from 'react';
 
 export default class LocationItem extends React.Component {
     render() {
-        console.log(this.props)
+       
         return (
             <li>
-{this.props.location}
+{/*{this.props.location}*/}
             <button>X</button>
             </li>
         )

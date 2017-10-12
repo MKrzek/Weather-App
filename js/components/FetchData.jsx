@@ -40,11 +40,11 @@ export default class FetchData extends React.Component{
          const locations=JSON.parse(localStorage.getItem('myLocations'))||[];
          if (tempLocalStorage.includes(this.state.cityName)){
             const myLocations=[this.state.cityName, ...locations];
-            console.log (myLocations);
+            
             localStorage.setItem('myLocations', JSON.stringify(myLocations))};
         if (!tempLocalStorage.includes(this.state.cityName)){
             const myTempLocations=[this.state.cityName,...tempLocalStorage];
-            console.log (myTempLocations)
+            
             localStorage.setItem('tempLocalStorage', JSON.stringify(myTempLocations));
         }
          
@@ -80,6 +80,7 @@ export default class FetchData extends React.Component{
                     render: true,
                    
               })  
+             
               
             })    
          }
