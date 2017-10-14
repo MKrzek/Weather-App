@@ -7,10 +7,10 @@ export default class DisplayWeather extends React.Component{
         return <div>
                  <div>Current Weather</div>
                 <span>{name}</span>
-                <span>{temperature}</span>
-                <span>{description}</span>
-                <img src={'http://openweathermap.org/img/w/' + weatherIcon + '.png'}></img>
+                <span>{temperature}°C</span>
                 <span>{descriptionMain}</span>
+                {weatherIcon?(<img src={'http://openweathermap.org/img/w/' + weatherIcon + '.png'} alt={description}/>): null}
+                
                
                </div>
     }
