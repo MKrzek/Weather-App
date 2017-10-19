@@ -3,10 +3,7 @@ import {Link, IndexLink}from 'react-router';
 
 
 export default class MyLocations extends React.Component{
-    constructor(props){
-        super(props);
-        
-    }
+    
     
     addToLocalStorage=(event)=>{ 
         event.preventDefault();
@@ -20,6 +17,7 @@ export default class MyLocations extends React.Component{
        
         return <div>
                 <button onClick={this.addToLocalStorage}>Add to my Locations</button>
+                
               </div>
     }
 }

@@ -13,7 +13,7 @@ export default class LocationItem extends React.Component {
      }  
     
     handleRemoveLocation=()=>{
-        if (this.props.handleRemoveLocation==='function'){
+        if (typeof this.props.handleRemoveLocation==='function'){
             this.props.handleRemoveLocation (this.props.location)
         }
         console.log ('remove button works')

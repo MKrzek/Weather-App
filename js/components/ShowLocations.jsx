@@ -6,6 +6,7 @@ export default class ShowLocations extends React.Component{
     constructor(props){
         super(props);
         this.state={
+            locationList:JSON.parse(localStorage.getItem('myLocations'))||[],
             temperature: null,
             description: null,
             weatherIcon:null,
@@ -35,20 +36,19 @@ export default class ShowLocations extends React.Component{
     handleRemoveLocation=(location)=>{
         console.log('remove function works');
      let storedLocations=JSON.parse(localStorage.getItem('myLocations'));
-     storedLocations=storedLocations.filter((item)=>storedLocation.item!==location)
-     console.log (location)
-     console.log(this.state.location)
-     
-     localStorage.setItem('myLocations', JSON.stringify(storedLocation));
-     
+     storedLocations=storedLocations.filter((item)=>item!==location)
+     console.log (storedLocations)
+     localStorage.setItem('myLocations', JSON.stringify(storedLocations));
+     this.setState({
+        locationList:storedLocations
+     })
  
    }
  
     
     
     render(){
-        const myLocations=JSON.parse(localStorage.getItem('myLocations'))||[];
-        
+        const myLocations=this.state.locationList;
         const locationList=myLocations.map((location, index)=>{
             return <LocationItem key={index} 
                                  location={location} 
