@@ -22,30 +22,38 @@ export default class ShowLocations extends React.Component{
             .then(r=>r.json())
             .then(data=>{
            console.log ('new fetch')
-           
              this.setState({
-
              temperature: data.main.temp,
              description: data.weather[0].description,
              weatherIcon:data.weather[0].icon,
              descriptionMain:data.weather[0].main,
              location: location.toUpperCase(),
              name: data.name,
-             
-
              })  
-             
-        })
-       
+          })  
     }
+    handleRemoveLocation=(location)=>{
+        console.log('remove function works');
+     let storedLocations=JSON.parse(localStorage.getItem('myLocations'));
+     storedLocations=storedLocations.filter((item)=>storedLocation.item!==location)
+     console.log (location)
+     console.log(this.state.location)
+     
+     localStorage.setItem('myLocations', JSON.stringify(storedLocation));
+     
+ 
+   }
+ 
+    
     
     render(){
         const myLocations=JSON.parse(localStorage.getItem('myLocations'))||[];
         
         const locationList=myLocations.map((location, index)=>{
-            return <LocationItem key={index} location={location} handleWeatherDisplay={this.handleWeatherDisplay}/>
-                                  
-            
+            return <LocationItem key={index} 
+                                 location={location} 
+                                 handleWeatherDisplay={this.handleWeatherDisplay} 
+                                 handleRemoveLocation={this.handleRemoveLocation}/>    
         })
         const {location, name, descriptionMain, weatherIcon, description, temperature}=this.state;
         return <div >
