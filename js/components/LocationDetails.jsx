@@ -7,8 +7,8 @@ render(){
     const{ location, name, descriptionMain, weatherIcon, description, temperature}=this.props;
     return <div>
            <h3>{name}</h3>
-           <span>Temperature: {temperature}°C</span>
-           <span>Description: {descriptionMain}</span>
+           <p> {temperature}°C</p>
+           <p> {descriptionMain}</p>
             {weatherIcon? (<img src={'http://openweathermap.org/img/w/' + weatherIcon + '.png'} alt={description}/>): null}
            </div>
 }

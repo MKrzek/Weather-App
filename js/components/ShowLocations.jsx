@@ -57,13 +57,14 @@ export default class ShowLocations extends React.Component{
                        <li>
                         <Link to ="/LocateMe">Locate Me</Link>
                        </li>
+                       
                    </ul>
                </nav>
                <ul>
                    {locationList}
                </ul> 
                <div>
-               {location?(<LocationDetails{...this.state}/>):null}
+               {location?(<LocationDetails {...this.state}/>): null}
                </div>
                </div>
     }

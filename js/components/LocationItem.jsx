@@ -1,4 +1,5 @@
 import React from 'react';
+
 //import ShowLocations from './ShowLocations.jsx';
 
 
@@ -19,11 +20,12 @@ export default class LocationItem extends React.Component {
        const {location}=this.props
         return (
             <li onClick={this.handleWeatherDisplay}>
-             <h3>{location}</h3>
+            <h3> {location}</h3>
             <button>X</button>
             </li>
         )
     }
 }
     
+
     
