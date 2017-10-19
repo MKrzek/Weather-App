@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, IndexLink}from 'react-router';
+import LocateMeDetails from './LocateMeDetails.jsx';
 export default class LocateMe extends React.Component{
 constructor(props){
     super(props);
@@ -32,7 +33,7 @@ componentDidMount(){
 handleMyLocationWeather=()=>{
     let lat=this.state.latitude;
     let lon=this.state.longitude;
-    return (fetch( `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a`))
+    return (fetch( `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a`))
     .then (r=>r.json())
     .then (data=>{
         console.log ('my location fetch')
@@ -41,12 +42,13 @@ handleMyLocationWeather=()=>{
             description: data.weather[0].description,
             weatherIcon:data.weather[0].icon,
             descriptionMain:data.weather[0].main,
-            location: location.toUpperCase(),
             name: data.name,
+            render: true,
         })
     })
 }
     render(){
+        const {name, descriptionMain, weatherIcon, description, temperature}=this.state;
         return <div>
                 <nav>
                    <ul>
@@ -59,7 +61,12 @@ handleMyLocationWeather=()=>{
                    </ul>
                </nav>
                <div>
-               abababababababababab
+                    <div>
+                        {this.state.error? 'Sorry, no position available': null}
+                    </div>
+                    <div>
+                        {this.state.render?(<LocateMeDetails {...this.state}/>):null}
+                    </div>
                </div>
                </div>
     }
