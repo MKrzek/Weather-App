@@ -7,7 +7,7 @@ import FetchData from './FetchData.jsx';
 
 class App extends React.Component{
     render(){
-        return <div>
+        return <div className='app'>
                 <Title />
                 <Navigation/>
                 <FetchData />  

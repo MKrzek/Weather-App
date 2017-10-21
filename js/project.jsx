@@ -12,6 +12,7 @@ import {
     IndexRoute,
     hashHistory
   } from 'react-router';
+  
 document.addEventListener('DOMContentLoaded', function(){
 ReactDOM.render(
         <Router history={hashHistory}>

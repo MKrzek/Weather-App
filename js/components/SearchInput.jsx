@@ -7,15 +7,19 @@ export default class SearchInput extends React.Component{
    
     render(){
     
-        return <div>
-                <form >
-                  <label>
-                      <input type='text' 
+        return <div className='form-group'>
+                <form>
+                    <div className='input-group'>
+                      <input className='form-control input-lg' 
+                             id="inputLarge"
+                             type='text' 
                              value={this.props.cityName} 
                              onChange={this.props.handleNameChange} 
-                             placeholder='check the weather by city name'/>
-                  </label>
-                  <input type='submit' onClick={this.props.handleSubmitButton}/>
+                             placeholder='enter a location'/>
+                            <span className='input-group-addon' onClick={this.props.handleSubmitButton}> 
+                                <p className='fa fa-search'></p>
+                            </span>
+                 </div> 
                </form>
                
                </div>

@@ -3,8 +3,9 @@ import {Link, IndexLink}from 'react-router';
 
 export default class Navigation extends React.Component{
     render(){
-        return <nav>
-                   <ul>
+        return <nav className='navbar navbar-default' id="bs-example-navbar-collapse-1">
+                <div className='container-fluid'>
+                   <ul className='nav navbar-nav'>
                        <li>
                        <Link to ="/ShowLocations">My Locations</Link>
                         </li>
@@ -12,5 +13,6 @@ export default class Navigation extends React.Component{
                           <Link to ="/LocateMe">Locate Me</Link>
                         </li>
                    </ul>
+                </div>
                </nav>
     }}
