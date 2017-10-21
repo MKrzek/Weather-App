@@ -27,5 +27,17 @@
 .locationItem-button{
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 29px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    padding: auto;
+    width: 28px;
+    text-align: center;
+    background-color: white;
+}
+.locationDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
 }
