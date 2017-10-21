@@ -14,3 +14,18 @@
     
 }
 
+.locationItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+   
+}
+.locationItem-header{
+    margin-left: 10px;
+    margin-right:10px;
+}
+.locationItem-button{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 29px;
+}

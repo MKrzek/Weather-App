@@ -57,8 +57,9 @@ export default class ShowLocations extends React.Component{
         })
         const {location, name, descriptionMain, weatherIcon, description, temperature}=this.state;
         return <div >
-               <nav>
-                   <ul>
+               <nav className='navebar navbar-default' id="bs-example-navbar-collapse-1">
+                   <div className='container-fluid'>
+                   <ul className='nav navbar-nav'>
                        <li>
                         <Link to="/">Back to Main Page</Link>
                        </li>
@@ -67,6 +68,7 @@ export default class ShowLocations extends React.Component{
                        </li>
                        
                    </ul>
+                   </div>
                </nav>
                <ul>
                    {locationList}

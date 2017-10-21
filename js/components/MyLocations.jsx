@@ -15,10 +15,8 @@ export default class MyLocations extends React.Component{
     } 
     render(){
        
-        return <div>
-                <button onClick={this.addToLocalStorage}>Add to my Locations</button>
-                
-              </div>
+        return  <button className='btn btn-default btn-lg btn-block' onClick={this.addToLocalStorage}>Add to my Locations</button> 
+             
     }
 }
 
