@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, IndexLink}from 'react-router';
+import ShowLocations from './ShowLocations.jsx';
 import LocateMeDetails from './LocateMeDetails.jsx';
 export default class LocateMe extends React.Component{
 constructor(props){
@@ -50,15 +51,17 @@ handleMyLocationWeather=()=>{
     render(){
         const {name, descriptionMain, weatherIcon, description, temperature}=this.state;
         return <div>
-                <nav>
-                   <ul>
+                <nav className='navbar navbar-default' id="bs-example-navbar-collapse-1">
+                    <div className='container-fluid'>
+                     <ul className='nav navbar-nav'>
                        <li>
                         <Link to="/">Back to Main Page</Link>
                        </li>
                        <li>
-                        <Link to ="/LocateMe">Locate Me</Link>
+                        <Link to ="/ShowLocations">My Locations</Link>
                        </li>
                    </ul>
+                   </div>
                </nav>
                <div>
                     <div>

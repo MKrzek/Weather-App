@@ -1,8 +1,4 @@
 import React from 'react';
-
-//import ShowLocations from './ShowLocations.jsx';
-
-
 export default class LocationItem extends React.Component {
     
     handleWeatherDisplay=()=>{
@@ -22,12 +18,11 @@ export default class LocationItem extends React.Component {
 
     render() {
        const {location}=this.props
-        return (
-            <li className='locationItem'>
-            <h3 className='locationItem-header' onClick={this.handleWeatherDisplay}>{location}</h3>
-            <div className='locationItem-button' onClick={this.handleRemoveLocation}>X</div>
-            </li>
-        )
+        return <li className='locationItem'>
+                 <h2 className='locationItem-header' onClick={this.handleWeatherDisplay}>{location}</h2>
+                 <div className='locationItem-button' onClick={this.handleRemoveLocation}>X</div>
+              </li>
+        
     }
 }
     
