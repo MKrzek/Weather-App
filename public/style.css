@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+img, video, canvas {
+  max-width: 100%; }
+
+body {
+  background-color: lightblue; }
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center; }
+
+.search-query {
+  height: 60px; }
+
+.btn-primary {
+  height: 60px; }
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.locationItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.locationItem-header {
+  margin: 21px; }
+
+.locationItem-button {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  padding: auto;
+  width: 40px;
+  text-align: center;
+  background-color: white;
+  font-size: 32px; }
+
+.locationDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20px; }
+
+.locationDetails-items {
+  margin-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+.locationDetails-icon {
+  margin-left: 20px;
+  margin-top: -13px;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+.locationDetails-name {
+  margin-left: 20px; }
+
+.locateMeDetails-item {
+  margin-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+.displayWeather-item {
+  margin-left: 20px; }

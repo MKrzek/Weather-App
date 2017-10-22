@@ -1,14 +1,15 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const WriteFilePlugin=require('write-file-webpack-plugin');
 module.exports = {
     entry : {
        './public/script.js': './js/project.jsx',
-       './public/style.css' : './sass/style.scss'
+       './public/style.css~' : './sass/style.scss'
       
    },
    output : {
        path: __dirname+'/',
-       filename: '[name]'
+       filename: '[name]',
+       publicPath: './public/'
    },
    devServer: {
       inline: true,
@@ -46,7 +47,8 @@ module.exports = {
         ]
     },
     plugins: [
-       new ExtractTextPlugin('./public/style.css')
+       new ExtractTextPlugin('./public/style.css'),
+       new WriteFilePlugin()
 
    ]
 };

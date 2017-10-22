@@ -68,7 +68,7 @@ handleMyLocationWeather=()=>{
                         {this.state.error? 'Sorry, no position available': null}
                     </div>
                     <div>
-                        {this.state.render?(<LocateMeDetails {...this.state}/>):'Please be patient the details are being loaded'}
+                        {this.state.render?(<LocateMeDetails {...this.state}/>):'Please be patient the details are being loaded...'}
                     </div>
                </div>
                </div>
