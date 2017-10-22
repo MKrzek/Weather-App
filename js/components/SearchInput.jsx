@@ -10,14 +10,14 @@ export default class SearchInput extends React.Component{
         return <div className='form-group'>
                 <form>
                     <div className='input-group'>
-                      <input className='form-control input-lg' 
-                             id="inputLarge"
+                      <input className='form-control  search-query' 
+                            
                              type='text' 
                              value={this.props.cityName} 
                              onChange={this.props.handleNameChange} 
                              placeholder='enter a location'/>
-                            <span className='input-group-addon' onClick={this.props.handleSubmitButton}> 
-                                <p className='fa fa-search'></p>
+                            <span className='input-group-btn' onClick={this.props.handleSubmitButton}> 
+                                <button type='submit' className='btn btn-primary'>Search</button>
                             </span>
                  </div> 
                </form>
