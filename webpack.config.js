@@ -9,7 +9,7 @@ module.exports = {
    output : {
        path: __dirname+'/',
        filename: '[name]',
-       publicPath: './public/'
+       publicPath: 'public/'
    },
    devServer: {
       inline: true,
