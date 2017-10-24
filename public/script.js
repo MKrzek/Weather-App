@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7b654727c43e8e6b7e6b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f5466a6272d8706ba17d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -42722,8 +42722,9 @@ var LocateMe = function (_React$Component) {
 
         _this.handleMyLocationWeather = function () {
             var API_KEY = '0d97dafb64ebaf36cf169cd4e5f02e5a';
-
-            var myLocationURL = 'https://api.openweathermap.org/data/2.5/weather?lat=' + _this.state.latitude + '&lon=' + _this.state.longitude + '&units=metric&APPID=' + API_KEY;
+            var lat = _this.state.latitude;
+            var lon = _this.state.longitude;
+            var myLocationURL = 'https://api.openweathermap.org/data/2.5/weather?APPID=' + API_KEY + '&units=imperial&lat=' + lat + '&lon=' + lon;
             return fetch(myLocationURL).then(function (r) {
                 return r.json();
             }).then(function (data) {
