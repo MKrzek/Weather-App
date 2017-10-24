@@ -10,7 +10,7 @@ render(){
            <div className='locationDetails'>
                 <p className='locationDetails-items'> {temperature}°C</p>
                 <p className='locationDetails-items'> {descriptionMain}</p>
-                {weatherIcon? (<img className='locationDetails-icon' src={'http://openweathermap.org/img/w/' + weatherIcon + '.png'} alt={description}/>): null}
+                {weatherIcon? (<img className='locationDetails-icon' src={'https://openweathermap.org/img/w/' + weatherIcon + '.png'} alt={description}/>): null}
            </div>
            </div>
 }

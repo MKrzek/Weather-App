@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "dbbd0407e2346b4f19f6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "aa5489663fe4ed2971c1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -38637,7 +38637,7 @@ var DisplayWeather = function (_React$Component) {
                     { className: 'displayWeather-item' },
                     descriptionMain
                 ),
-                weatherIcon ? _react2.default.createElement('img', { className: 'displayWeather-item', src: 'http://openweathermap.org/img/w/' + weatherIcon + '.png', alt: description }) : null
+                weatherIcon ? _react2.default.createElement('img', { className: 'displayWeather-item', src: 'https://openweathermap.org/img/w/' + weatherIcon + '.png', alt: description }) : null
             );
         }
     }]);
@@ -42666,7 +42666,7 @@ var LocationDetails = function (_React$Component) {
                               ' ',
                               descriptionMain
                          ),
-                         weatherIcon ? _react2.default.createElement('img', { className: 'locationDetails-icon', src: 'http://openweathermap.org/img/w/' + weatherIcon + '.png', alt: description }) : null
+                         weatherIcon ? _react2.default.createElement('img', { className: 'locationDetails-icon', src: 'https://openweathermap.org/img/w/' + weatherIcon + '.png', alt: description }) : null
                     )
                );
           }
@@ -42902,7 +42902,7 @@ var LocateMeDetails = function (_React$Component) {
                         { className: 'locateMeDetails-item' },
                         descriptionMain
                     ),
-                    weatherIcon ? _react2.default.createElement('img', { className: 'locateMeDetails-item', src: 'http://openweathermap.org/img/w/' + weatherIcon + '.png', alt: description }) : null
+                    weatherIcon ? _react2.default.createElement('img', { className: 'locateMeDetails-item', src: 'https://openweathermap.org/img/w/' + weatherIcon + '.png', alt: description }) : null
                 )
             );
         }

@@ -8,7 +8,7 @@ export default class LocateMeDetails extends React.Component{
                 <div className='locateMeDetails'>
                     <span className='locateMeDetails-item'>{temperature}°C</span>
                     <span className='locateMeDetails-item'>{descriptionMain}</span>
-                    {weatherIcon?(<img className='locateMeDetails-item' src={'http://openweathermap.org/img/w/' + weatherIcon + '.png'} alt={description}/>): null}
+                    {weatherIcon?(<img className='locateMeDetails-item' src={'https://openweathermap.org/img/w/' + weatherIcon + '.png'} alt={description}/>): null}
                 </div>
                </div>
     }}
