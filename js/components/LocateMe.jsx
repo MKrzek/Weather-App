@@ -33,9 +33,8 @@ componentDidMount(){
 
 handleMyLocationWeather=()=>{
     const API_KEY='0d97dafb64ebaf36cf169cd4e5f02e5a';
-    let lat=this.state.latitude;
-    let lon=this.state.longitude;
-    const myLocationURL= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=${API_KEY}`;
+
+    const myLocationURL= 'https://api.openweathermap.org/data/2.5/weather?lat='+this.state.latitude+'&lon='+this.state.longitude+'&units=metric&APPID='+API_KEY ;
     return fetch(myLocationURL)
     .then (r=>r.json())
     .then (data=>{
