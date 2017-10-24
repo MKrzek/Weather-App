@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "aa5489663fe4ed2971c1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7b654727c43e8e6b7e6b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -42767,7 +42767,7 @@ var LocateMe = function (_React$Component) {
                 _this2.handleMyLocationWeather();
             }, function (error) {
                 return _this2.setState({ error: error.message });
-            }, { enableHighAccuracy: true, timeout: 30000, maximumAge: 1000 });
+            }, { enableHighAccuracy: true, timeout: 40000, maximumAge: 1000 });
         }
     }, {
         key: 'render',

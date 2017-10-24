@@ -27,7 +27,7 @@ componentDidMount(){
         this.handleMyLocationWeather()
     },
     (error)=>this.setState({ error: error.message}),
-    {enableHighAccuracy:true, timeout: 30000, maximumAge: 1000},
+    {enableHighAccuracy:true, timeout: 40000, maximumAge: 1000},
     )    
 }
 
