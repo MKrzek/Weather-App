@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a88a8112934e86453689"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f2fee18efc032fdc483a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -7161,7 +7161,9 @@ var ShowLocations = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (ShowLocations.__proto__ || Object.getPrototypeOf(ShowLocations)).call(this, props));
 
         _this.handleWeatherDisplay = function (location) {
-            return fetch('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a').then(function (r) {
+            var API_KEY = '0d97dafb64ebaf36cf169cd4e5f02e5a';
+            var myPlacesURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=metric&APPID=' + API_KEY;
+            return fetch(myPlacesURL).then(function (r) {
                 return r.json();
             }).then(function (data) {
                 console.log('new fetch');

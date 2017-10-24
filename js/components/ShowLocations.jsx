@@ -19,7 +19,9 @@ export default class ShowLocations extends React.Component{
     } 
 
     handleWeatherDisplay=(location)=>{
-        return (fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a`))
+        const API_KEY='0d97dafb64ebaf36cf169cd4e5f02e5a';
+        const myPlacesURL=`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=${API_KEY}`;
+        return fetch(myPlacesURL)
             .then(r=>r.json())
             .then(data=>{
            console.log ('new fetch')
