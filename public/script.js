@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "20318eb521c37600d800"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "298cbbe1c738dda1ef2e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -24479,7 +24479,7 @@ var FetchData = function (_React$Component) {
                         alertDisplay: true
                     });
                 } else {
-                    return fetch('http://api.openweathermap.org/data/2.5/weather?q=' + _this.state.cityName + '&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a').then(function (r) {
+                    return fetch('https://api.openweathermap.org/data/2.5/weather?q=' + _this.state.cityName + '&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a').then(function (r) {
                         return r.json();
                     }).then(function (data) {
                         console.log('fetch');

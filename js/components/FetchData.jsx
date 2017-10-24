@@ -69,7 +69,7 @@ export default class FetchData extends React.Component{
                         alertDisplay: true,
                     })
                 }else{    
-                return fetch('http://api.openweathermap.org/data/2.5/weather?q=' + this.state.cityName + '&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a')
+                return fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.state.cityName + '&units=metric&APPID=0d97dafb64ebaf36cf169cd4e5f02e5a')
                    .then(r=>r.json())
                    .then(data=>{
                   console.log ('fetch')
