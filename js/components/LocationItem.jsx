@@ -18,7 +18,7 @@ export default class LocationItem extends React.Component {
 
     render() {
        const {location}=this.props
-        return <li className='locationItem'>
+        return <li className='locationItem pointer'>
                  <h2 className='locationItem-header' onClick={this.handleWeatherDisplay}>{location}</h2>
                  <div className='locationItem-button' onClick={this.handleRemoveLocation}>X</div>
               </li>

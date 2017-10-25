@@ -30,7 +30,7 @@ body {
   flex-direction: row;
   justify-content: flex-start; }
 
-li.locationItem:hover {
+.pointer {
   cursor: pointer; }
 
 .locationItem-header {

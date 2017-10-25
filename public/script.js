@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4fbd9047880d43b1e504"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ae539f8ff19a40831a76"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -42590,7 +42590,7 @@ var LocationItem = function (_React$Component) {
 
             return _react2.default.createElement(
                 'li',
-                { className: 'locationItem' },
+                { className: 'locationItem pointer' },
                 _react2.default.createElement(
                     'h2',
                     { className: 'locationItem-header', onClick: this.handleWeatherDisplay },
