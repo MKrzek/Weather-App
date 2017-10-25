@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, IndexLink}from 'react-router';
+import {Link, IndexLink} from 'react-router';
 import AlertContainer from 'react-alert';
 
 export default class MyLocations extends React.Component{

@@ -16,9 +16,9 @@ import {
 document.addEventListener('DOMContentLoaded', function(){
 ReactDOM.render(
         <Router history={hashHistory}>
-        <Route path="/" component={App}/>
-        <Route path="/ShowLocations" component={ShowLocations}/>
-        <Route path="/:LocateMe" component={LocateMe}/>
+        <Route path='/' component={App}/>
+        <Route path='/ShowLocations' component={ShowLocations}/>
+        <Route path='/:LocateMe' component={LocateMe}/>
         
         </Router>,
         document.querySelector('#app')

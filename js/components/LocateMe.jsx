@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, IndexLink}from 'react-router';
+import {Link, IndexLink} from 'react-router';
 import ShowLocations from './ShowLocations.jsx';
 import LocateMeDetails from './LocateMeDetails.jsx';
 export default class LocateMe extends React.Component{
@@ -35,7 +35,7 @@ handleMyLocationWeather=()=>{
     const API_KEY='0d97dafb64ebaf36cf169cd4e5f02e5a';
     const lat=this.state.latitude;
     const lon=this.state.longitude;
-    const myLocationURL= `https://api.openweathermap.org/data/2.5/weather?APPID=${API_KEY}&units=imperial&lat=${lat}&lon=${lon}`
+    const myLocationURL= `https://api.openweathermap.org/data/2.5/weather?APPID=${API_KEY}&units=metric&lat=${lat}&lon=${lon}`
     return fetch(myLocationURL)
     .then (r=>r.json())
     .then (data=>{
@@ -53,14 +53,14 @@ handleMyLocationWeather=()=>{
     render(){
         const {name, descriptionMain, weatherIcon, description, temperature}=this.state;
         return <div>
-                <nav className='navbar navbar-default' id="bs-example-navbar-collapse-1">
+                <nav className='navbar navbar-default' id='bs-example-navbar-collapse-1'>
                     <div className='container-fluid'>
                      <ul className='nav navbar-nav'>
                        <li>
-                        <Link to="/">Back to Main Page</Link>
+                        <Link to='/'>Back to Main Page</Link>
                        </li>
                        <li>
-                        <Link to ="/ShowLocations">My Locations</Link>
+                        <Link to ='/ShowLocations'>My Locations</Link>
                        </li>
                    </ul>
                    </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, IndexLink}from 'react-router';
+import {Link, IndexLink} from 'react-router';
 import LocationItem from './LocationItem.jsx';
 import LocationDetails from './LocationDetails.jsx';
 export default class ShowLocations extends React.Component{
@@ -59,14 +59,14 @@ export default class ShowLocations extends React.Component{
         })
         const {location, name, descriptionMain, weatherIcon, description, temperature}=this.state;
         return <div >
-               <nav className='navebar navbar-default' id="bs-example-navbar-collapse-1">
+               <nav className='navebar navbar-default' id='bs-example-navbar-collapse-1'>
                    <div className='container-fluid'>
                    <ul className='nav navbar-nav'>
                        <li>
-                        <Link to="/">Back to Main Page</Link>
+                        <Link to='/'>Back to Main Page</Link>
                        </li>
                        <li>
-                        <Link to ="/LocateMe">Locate Me</Link>
+                        <Link to ='/LocateMe'>Locate Me</Link>
                        </li>
                        
                    </ul>
