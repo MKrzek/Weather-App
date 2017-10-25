@@ -30,6 +30,9 @@ body {
   flex-direction: row;
   justify-content: flex-start; }
 
+li.locationItem:hover {
+  cursor: pointer; }
+
 .locationItem-header {
   margin: 21px; }
 
