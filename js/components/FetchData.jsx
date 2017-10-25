@@ -24,7 +24,6 @@ export default class FetchData extends React.Component{
            emptyStringAlert: false,
         }
     }
-    
     handleNameChange=(event)=>{ 
         this.setState({
              cityName:event.target.value,
@@ -37,9 +36,7 @@ export default class FetchData extends React.Component{
          event.preventDefault();
          this.setState({
             render:false,
-            alertDisplay: false,
-            
-            
+            alertDisplay: false,  
          })
          if (this.state.cityName===''){
             this.setState({
@@ -57,6 +54,22 @@ export default class FetchData extends React.Component{
             const myTempLocations=[this.state.cityName,...tempLocalStorage];
             localStorage.setItem('tempLocalStorage', JSON.stringify(myTempLocations));
         }  
+     }
+     handleKeyPress=(event)=>{
+         if ((event.keyCode==='13')&&(this.state.cityName!=='')){
+             this.showWeather()
+         }
+         const tempLocalStorage= JSON.parse(localStorage.getItem('tempLocalStorage'))||[];
+         const locations=JSON.parse(localStorage.getItem('myLocations'))||[];
+         if (tempLocalStorage.includes(this.state.cityName)){
+            const myLocations=[this.state.cityName, ...locations];
+            localStorage.setItem('myLocations', JSON.stringify(myLocations))};
+        if (!tempLocalStorage.includes(this.state.cityName)){
+            const myTempLocations=[this.state.cityName,...tempLocalStorage];
+            localStorage.setItem('tempLocalStorage', JSON.stringify(myTempLocations));
+        }  
+
+
      }
     
     showWeather = () => {
@@ -106,7 +119,8 @@ export default class FetchData extends React.Component{
             return<div>
                        <SearchInput cityName={cityName} 
                        handleNameChange={this.handleNameChange} 
-                       handleSubmitButton={this.handleSubmitButton}/>
+                       handleSubmitButton={this.handleSubmitButton}
+                       handleKeyPress={this.handleKeyPress}/>
                        {alertDisplay?(<DisplayAlert />): null}
                         {render?(<DisplayWeather {...this.state}/>): null}
                         {emptyStringAlert?(<EmptyStringAlert/>): null}

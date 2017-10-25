@@ -16,7 +16,9 @@ export default class SearchInput extends React.Component{
                              value={this.props.cityName} 
                              onChange={this.props.handleNameChange} 
                              placeholder='enter a location'/>
-                            <span className='input-group-btn' onClick={this.props.handleSubmitButton}> 
+                            <span className='input-group-btn' 
+                                  onClick={this.props.handleSubmitButton} 
+                                  onKeyPress={this.props.handleKeyPress}> 
                                 <button type='submit' className='btn btn-primary'>Search</button>
                             </span>
                  </div> 

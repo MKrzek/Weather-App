@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "56645285901e183721eb"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "91922353c945e1a00d43"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -24454,13 +24454,28 @@ var FetchData = function (_React$Component) {
             _this.setState({
                 render: false,
                 alertDisplay: false
-
             });
             if (_this.state.cityName === '') {
                 _this.setState({
                     emptyStringAlert: true
                 });
             } else {
+                _this.showWeather();
+            }
+            var tempLocalStorage = JSON.parse(localStorage.getItem('tempLocalStorage')) || [];
+            var locations = JSON.parse(localStorage.getItem('myLocations')) || [];
+            if (tempLocalStorage.includes(_this.state.cityName)) {
+                var myLocations = [_this.state.cityName].concat(_toConsumableArray(locations));
+                localStorage.setItem('myLocations', JSON.stringify(myLocations));
+            };
+            if (!tempLocalStorage.includes(_this.state.cityName)) {
+                var myTempLocations = [_this.state.cityName].concat(_toConsumableArray(tempLocalStorage));
+                localStorage.setItem('tempLocalStorage', JSON.stringify(myTempLocations));
+            }
+        };
+
+        _this.handleKeyPress = function (event) {
+            if (event.keyCode === '13' && _this.state.cityName !== '') {
                 _this.showWeather();
             }
             var tempLocalStorage = JSON.parse(localStorage.getItem('tempLocalStorage')) || [];
@@ -24549,7 +24564,8 @@ var FetchData = function (_React$Component) {
                 null,
                 _react2.default.createElement(_SearchInput2.default, { cityName: cityName,
                     handleNameChange: this.handleNameChange,
-                    handleSubmitButton: this.handleSubmitButton }),
+                    handleSubmitButton: this.handleSubmitButton,
+                    handleKeyPress: this.handleKeyPress }),
                 alertDisplay ? _react2.default.createElement(_DisplayAlert2.default, null) : null,
                 render ? _react2.default.createElement(_DisplayWeather2.default, this.state) : null,
                 emptyStringAlert ? _react2.default.createElement(_EmptyStringAlert2.default, null) : null,
@@ -38573,7 +38589,9 @@ var SearchInput = function (_React$Component) {
                             placeholder: 'enter a location' }),
                         _react2.default.createElement(
                             'span',
-                            { className: 'input-group-btn', onClick: this.props.handleSubmitButton },
+                            { className: 'input-group-btn',
+                                onClick: this.props.handleSubmitButton,
+                                onKeyPress: this.props.handleKeyPress },
                             _react2.default.createElement(
                                 'button',
                                 { type: 'submit', className: 'btn btn-primary' },
