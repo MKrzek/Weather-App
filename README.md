@@ -5,6 +5,7 @@ Techologies used:
  React Router,
  React Alert,
  Local Storage,
+ ES6,
  Sass,
  Webpack,
  Fetch
